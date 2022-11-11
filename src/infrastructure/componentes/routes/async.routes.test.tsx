@@ -27,8 +27,8 @@ describe('Given AppRoutes component', () => {
     describe(`When we render the component 
                 And the route is home`, () => {
         beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
-            await act(() => {
+            // await sonar wants this await out idk why
+            act(() => {
                 render(
                     <Router initialEntries={paths} initialIndex={0}>
                         <AppRoutes />
@@ -46,7 +46,6 @@ describe('Given AppRoutes component', () => {
     describe(`When we render the component 
             And the route is details`, () => {
         beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
             await act(async () => {
                 render(
                     <Router initialEntries={paths} initialIndex={1}>
@@ -65,7 +64,6 @@ describe('Given AppRoutes component', () => {
     describe(`When we render the component 
             And the route is gnomes`, () => {
         beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
             await act(async () => {
                 render(
                     <Router initialEntries={paths} initialIndex={2}>
@@ -84,7 +82,6 @@ describe('Given AppRoutes component', () => {
     describe(`When we render the component 
             And the route is cones`, () => {
         beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
             await act(async () => {
                 render(
                     <Router initialEntries={paths} initialIndex={3}>
@@ -103,7 +100,6 @@ describe('Given AppRoutes component', () => {
     describe(`When we render the component 
             And the route is a random one`, () => {
         beforeEach(async () => {
-            // eslint-disable-next-line testing-library/no-unnecessary-act
             await act(async () => {
                 render(
                     <Router initialEntries={paths} initialIndex={4}>
