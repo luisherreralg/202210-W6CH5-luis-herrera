@@ -1,5 +1,10 @@
+import { AppRoutes } from '../routes/app.routes';
 import './app.css';
 
 export function App() {
-    return <div className="app">Estoy usando la plantilla de LUIS</div>;
+    return (
+        <>
+            <AppRoutes></AppRoutes>
+        </>
+    );
 }
