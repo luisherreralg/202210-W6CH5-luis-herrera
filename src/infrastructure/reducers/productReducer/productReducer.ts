@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { Product } from '../types/types';
+import { Product } from '../../types/types';
 import * as action from './action.creators';
 
 const initialState: Product[] = [];
