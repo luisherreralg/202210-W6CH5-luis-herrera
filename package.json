@@ -48,7 +48,8 @@
             "@typescript-eslint"
         ],
         "rules": {
-            "testing-library/no-render-in-setup": "off"
+            "testing-library/no-render-in-setup": "off",
+            "testing-library/no-unnecessary-act": "off"
         }
     },
     "prettier": {
