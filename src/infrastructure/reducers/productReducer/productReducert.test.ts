@@ -1,4 +1,4 @@
-import { Product } from '../types/types';
+import { Product } from '../../types/types';
 import { actionTypes } from './action.types';
 import { productReducer } from './productReducer';
 
