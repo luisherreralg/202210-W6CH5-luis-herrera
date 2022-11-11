@@ -4,7 +4,7 @@ import { actionTypes } from './action.types';
 
 export const loadActionCreator = createAction<Product[]>(actionTypes.load);
 
-export const addActionCreator = createAction<ProtoCart>(actionTypes.add);
+export const addActionCreator = createAction<Product>(actionTypes.add);
 
 export const updateActionCreator = createAction<Product>(actionTypes.update);
 
