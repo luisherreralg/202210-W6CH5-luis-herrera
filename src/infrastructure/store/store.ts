@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { productReducer } from '../reducer/productReducer';
+import { productReducer } from '../reducers/productReducer/productReducer';
 
 export const appStore = configureStore({
     reducer: {
