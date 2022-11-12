@@ -1,6 +1,5 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
-
 import { ProductRepository } from '../services/product.repository';
 import { appStore } from '../store/store';
 import { Product, ProtoCart } from '../types/types';
@@ -57,7 +56,6 @@ describe('Given the custom hook "useProducts', () => {
             .fn()
             .mockResolvedValue(productMock);
 
-        // const store = {}; // whatever you to do test your mock store today
         const wrapper = ({ children }: { children: JSX.Element }) => (
             <Provider store={appStore}>{children}</Provider>
         );
