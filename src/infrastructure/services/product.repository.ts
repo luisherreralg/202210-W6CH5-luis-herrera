@@ -21,10 +21,10 @@ export class ProductRepository implements Repository<Product> {
         });
     }
 
-    create(task: Partial<Product>): Promise<Product> {
+    create(product: Partial<Product>): Promise<Product> {
         return fetch(this.url, {
             method: 'POST',
-            body: JSON.stringify(task),
+            body: JSON.stringify(product),
             headers: {
                 'content-type': 'application/json',
             },
