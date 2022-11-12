@@ -13,8 +13,7 @@ export const useProducts = () => {
     useEffect(() => {
         apiProducts
             .getAll()
-            .then((products) => dispatcher(action.loadActionCreator(products)))
-            .catch((error: Error) => console.log(error.name, error.message));
+            .then((products) => dispatcher(action.loadActionCreator(products)));
     }, [apiProducts, dispatcher]);
 
     const handleAdd = (newProduct: ProtoCart) => {
@@ -22,8 +21,7 @@ export const useProducts = () => {
             .create(newProduct)
             .then((products: Product) =>
                 dispatcher(action.addActionCreator(products))
-            )
-            .catch((error: Error) => console.log(error.name, error.message));
+            );
     };
 
     const hanldeUpdate = (updateProduct: Product) => {
@@ -31,15 +29,13 @@ export const useProducts = () => {
             .update(updateProduct)
             .then((product: Product) =>
                 dispatcher(action.updateActionCreator(product))
-            )
-            .catch((error: Error) => console.log(error.name, error.message));
+            );
     };
 
     const handleDelete = (id: string) => {
         apiProducts
             .delete(id)
-            .then(() => dispatcher(action.deleteActionCreator(id)))
-            .catch((error: Error) => console.log(error.name, error.message));
+            .then(() => dispatcher(action.deleteActionCreator(id)));
     };
 
     return {
