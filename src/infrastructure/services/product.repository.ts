@@ -15,10 +15,14 @@ export class ProductRepository implements Repository<Product> {
     }
 
     getAll(): Promise<Array<Product>> {
-        return fetch(this.url).then((response) => {
-            if (response.ok) return response.json();
-            throw this.createError(response);
-        });
+        return fetch(this.url)
+            .then((response) => {
+                if (response.ok) return response.json();
+                throw this.createError(response);
+            })
+            .catch((error) => {
+                return `${error}`;
+            });
     }
 
     create(product: Partial<Product>): Promise<Product> {
@@ -28,18 +32,26 @@ export class ProductRepository implements Repository<Product> {
             headers: {
                 'content-type': 'application/json',
             },
-        }).then((response) => {
-            if (response.ok) return response.json();
-            throw this.createError(response);
-        });
+        })
+            .then((response) => {
+                if (response.ok) return response.json();
+                throw this.createError(response);
+            })
+            .catch((error) => {
+                return `${error}`;
+            });
     }
 
     delete(id: string): Promise<void> {
         return fetch(`${this.url}/${id}`, {
             method: 'DELETE',
-        }).then((response) => {
-            if (!response.ok) throw this.createError(response);
-        });
+        })
+            .then((response) => {
+                if (!response.ok) throw this.createError(response);
+            })
+            .catch((error) => {
+                return `${error}` as unknown as void;
+            });
     }
 
     update(partialProduct: Partial<Product>): Promise<Product> {
@@ -49,9 +61,13 @@ export class ProductRepository implements Repository<Product> {
             headers: {
                 'content-type': 'application/json',
             },
-        }).then((response) => {
-            if (response.ok) return response.json();
-            throw this.createError(response);
-        });
+        })
+            .then((response) => {
+                if (response.ok) return response.json();
+                throw this.createError(response);
+            })
+            .catch((error) => {
+                return `${error}`;
+            });
     }
 }
