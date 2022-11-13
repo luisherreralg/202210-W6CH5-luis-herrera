@@ -19,9 +19,18 @@ export function ProductListItem({ item }: { item: Product }) {
                 </div>
                 <div className=" flex flex-col bg-slate-200 gap-2 p-2 rounded-md">
                     <h3 className="text-xl font-bold">{item.name}</h3>
-                    <p className="text-base font-bold text-right">
-                        {item.price}€
-                    </p>
+                    {item.onsale ? (
+                        <>
+                            <p className="text-base  text-right line-through">
+                                {item.price}€
+                            </p>
+                            <p className="text-base font-bold text-right text-red-400 text-2xl">
+                                {item.onsalePrice}€
+                            </p>
+                        </>
+                    ) : (
+                        <p className="text-base text-right">{item.price}€</p>
+                    )}
                 </div>
             </Link>
         </li>
