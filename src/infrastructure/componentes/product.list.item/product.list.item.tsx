@@ -5,7 +5,7 @@ export function ProductListItem({ item }: { item: Product }) {
     return (
         <li>
             <Link
-                to={`/Details/${item.id}`}
+                to={`/details/${item.id}`}
                 onClick={() => {
                     window.scrollTo(0, 0);
                 }}

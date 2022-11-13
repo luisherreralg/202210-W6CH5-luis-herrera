@@ -20,7 +20,7 @@ export function AppRoutes() {
         <Suspense>
             <Routes>
                 <Route path="home" element={<Home />} />
-                <Route path="details" element={<Details />} />
+                <Route path="/details/:id" element={<Details />} />
                 <Route path="gnomes" element={<Gnomes />} />
                 <Route path="cones" element={<Cones />} />
                 <Route path="notFound" element={<NotFound />} />

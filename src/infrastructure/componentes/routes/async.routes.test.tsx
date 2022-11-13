@@ -22,7 +22,7 @@ jest.mock('../../../features/details/page/details.page', () => {
 describe('Given AppRoutes component', () => {
     let paths: Array<string>;
     beforeEach(() => {
-        paths = ['/home', '/details', '/gnomes', '/cones', '/randomTest'];
+        paths = ['/home', '/details/0', '/gnomes', '/cones', '/randomTest'];
     });
     describe(`When we render the component 
                 And the route is home`, () => {
