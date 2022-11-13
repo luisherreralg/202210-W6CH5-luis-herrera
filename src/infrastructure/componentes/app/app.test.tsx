@@ -1,5 +1,7 @@
 import { act, render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { appStore } from '../../store/store';
 import { App } from './app';
 
 interface CryptoPlus extends Crypto {
@@ -22,7 +24,9 @@ describe('Given App component', () => {
             await act(async () => {
                 render(
                     <Router>
-                        <App />
+                        <Provider store={appStore}>
+                            <App />
+                        </Provider>
                     </Router>
                 );
             });
