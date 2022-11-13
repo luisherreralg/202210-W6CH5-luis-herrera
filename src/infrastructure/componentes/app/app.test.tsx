@@ -32,7 +32,7 @@ describe('Given App component', () => {
             });
         });
         test('Then it should display the title', () => {
-            const element = screen.getByText(/Home/i);
+            const element = screen.getByText(/Cones&Gnomes/i);
             expect(element).toBeInTheDocument();
         });
     });
