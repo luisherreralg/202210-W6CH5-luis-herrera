@@ -6,7 +6,11 @@ function HomePage() {
     return (
         <div>
             <h1 className="text-5xl text-center p-5 shadow-md mb-6">On sale</h1>
-            <ProductList products={products}></ProductList>
+            <ProductList
+                products={products.filter((items) => {
+                    return items.onsale;
+                })}
+            ></ProductList>
         </div>
     );
 }
