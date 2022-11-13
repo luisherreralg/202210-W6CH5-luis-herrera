@@ -1,12 +1,12 @@
 import { Product } from '../../types/types';
+import { ProductListItem } from '../product.list.item/product.list.item';
 
 export function ProductList({ products }: { products: Product[] }) {
     return (
         <section>
             <ul>
                 {products.map((item: Product) => (
-                    // <GifItem key={item.id} item={item}></GifItem>
-                    <li key={item.id}>{item.name}</li>
+                    <ProductListItem key={item.id} item={item} />
                 ))}
             </ul>
         </section>

@@ -23,7 +23,7 @@ describe('Given GifList component', () => {
                     <ProductList products={mockGifList} />
                 </Router>
             );
-            const element = screen.getByText(/name/i);
+            const element = screen.getByAltText(/product/i);
             expect(element).toBeInTheDocument();
         });
     });
