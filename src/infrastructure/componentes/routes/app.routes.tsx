@@ -19,11 +19,11 @@ export function AppRoutes() {
     return (
         <Suspense>
             <Routes>
-                <Route path="home" element={<Home />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/details/:id" element={<Details />} />
-                <Route path="gnomes" element={<Gnomes />} />
-                <Route path="cones" element={<Cones />} />
-                <Route path="notFound" element={<NotFound />} />
+                <Route path="/gnomes" element={<Gnomes />} />
+                <Route path="/cones" element={<Cones />} />
+                <Route path="/notFound" element={<NotFound />} />
                 <Route path="" element={<Home />} />
                 <Route
                     path="*"
