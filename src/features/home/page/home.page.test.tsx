@@ -15,7 +15,7 @@ describe('Given HomePage component', () => {
                     </Provider>
                 </Router>
             );
-            const title = screen.getByText(/Home Page/i);
+            const title = screen.getByText(/On sale/i);
             expect(title).toBeInTheDocument();
         });
     });
