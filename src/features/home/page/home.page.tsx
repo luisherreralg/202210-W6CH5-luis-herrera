@@ -5,7 +5,7 @@ function HomePage() {
     const { products } = useProducts();
     return (
         <div>
-            <h1>Home Page</h1>
+            <h1 className="text-5xl text-center p-5 shadow-md mb-6">On sale</h1>
             <ProductList products={products}></ProductList>
         </div>
     );
